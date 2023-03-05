@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Header from './Header'
 
 const Layout = ({ children }) => {
     return (
@@ -15,6 +16,7 @@ const Layout = ({ children }) => {
 				/>
 			</Head>
             
+			<Header />
 			{children}
 		</>
 	);
