@@ -3,7 +3,7 @@ import Header from './Header'
 
 const Layout = ({ children }) => {
     return (
-		<div className="w-screen h-screen bg-gradient-to-t from-indigo-500 via-purple-500 to-pink-400">
+		<div className="w-screen min-h-screen h-full bg-gradient-to-t from-indigo-300 via-purple-300 to-pink-300">
 			<Head>
 				<title>Jared Schips</title>
 				<meta

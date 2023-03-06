@@ -1,7 +1,10 @@
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Inter } from 'next/font/google';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+
+const inter = Inter({ subsets: ['latin'] })
 
 function classNames(...classes) {
 	return classes.filter(Boolean).join(' ');
@@ -58,7 +61,10 @@ export default function Navbar() {
 									)}
 								</Disclosure.Button>
 							</div>
-							<div className="flex flex-1 items-center justify-center mt-10 sm:items-stretch">
+							<div className='text-2xl md:text-2xl font font-bold w-full text-center sm:w-fit sm:text-start md:absolute'>
+								Jared Schips
+							</div>
+							<div className="flex flex-1 items-center justify-center sm:items-stretch">
 								<div className="hidden sm:ml-6 sm:block">
 									<div className="flex space-x-4">
 										{navigation.map(item => (
@@ -68,8 +74,8 @@ export default function Navbar() {
 												className={classNames(
 													item.current
 														? 'backdrop-brightness-50 text-white'
-														: 'text-gray-900 hover:backdrop-brightness-75',
-													'rounded-md px-3 py-3 text-3xl font-medium'
+														: `hover:backdrop-brightness-75`,
+													`rounded-b-md px-3 py-3 pt-7 text-lg font-medium ${inter.className}`
 												)}
 												aria-current={
 													item.current
@@ -97,7 +103,7 @@ export default function Navbar() {
 										item.current
 											? 'backdrop-brightness-50 text-white'
 											: 'text-gray-900 hover:backdrop-brightness-75',
-										'block rounded-md px-3 py-3 text-3xl font-medium'
+										`block rounded-md px-3 py-3 text-3xl font-medium w-screen ${inter.className}`
 									)}
 									aria-current={
 										item.current ? 'page' : undefined
