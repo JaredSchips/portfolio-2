@@ -1,4 +1,6 @@
 import Image from "next/image"
+import websiteLogo from "../../public/website.svg"
+import githubLogo from "../../public/github.svg"
 
 export default function Project({ title, src, url, githubUrl }) {
   return (
@@ -12,8 +14,8 @@ export default function Project({ title, src, url, githubUrl }) {
         className='transition-rounded duration-500 rounded-[150px] hover:rounded-3xl hover:cursor-pointer'
       /></a>
       <div className="flex justify-evenly mt-5">
-        <a href={url}><Image src='/website.svg' width={32} height={32} alt='Website link' /></a>
-        <a href={githubUrl}><Image src='/github.svg' width={32} height={32} alt='Github link' /></a>
+        <a href={url}><Image src={websiteLogo} width={32} height={32} alt='Website link' /></a>
+        <a href={githubUrl}><Image src={githubLogo} width={32} height={32} alt='Github link' /></a>
       </div>
     </div>
   )
